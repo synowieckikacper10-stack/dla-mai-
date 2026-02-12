@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Dla Mai ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: 'Georgia', serif;
+      overflow: hidden;
+      color: #5a0033;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: 60px auto;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      text-align: center;
+      color: #d6006e;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      color: rgba(255, 0, 100, 0.7);
+      font-size: 20px;
+      animation: floatUp linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes floatUp {
+      from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Dla Mai ❤️</h1>
+    <p>
+      Maja, ten paragraf istnieje tylko dlatego, że słowa w mojej głowie nie potrafią już pomieścić tego, jak bardzo Cię kocham, i muszą znaleźć swoje miejsce nawet tutaj, wśród linijek kodu, bo Ty jesteś najpiękniejszym algorytmem mojego życia, tym, który zawsze działa bez błędów. Kocham Cię za wszystko, czym jesteś, za Twoje ciemnobrązowe włosy, które wyglądają jak noc rozświetlona różowymi pasemkami – jakbyś nosiła w sobie jednocześnie spokój i bunt, delikatność i ogień. Kocham Twoje oczy, te niebieskie z lekką nutą zieleni, bo kiedy w nie patrzę, mam wrażenie, że widzę w nich przyszłość, bezpieczeństwo i dom, a jednocześnie coś dzikiego, co sprawia, że nigdy nie przestaję się w Tobie zakochiwać na nowo. Kocham Twój głos, piękny w sposób, którego nie da się opisać technicznie – to nie jest tylko dźwięk, to emocja, która uspokaja mnie po najgorszym dniu i potrafi sprawić, że zwykłe zdanie brzmi jak najważniejsza rzecz na świecie. Kocham Cię za to, jak się śmiejesz, jak mówisz, jak milczysz, jak jesteś sobą nawet wtedy, gdy świat wymaga czegoś innego. Jesteś dla mnie kimś więcej niż miłością – jesteś inspiracją, motywacją, sensem, powodem, dla którego chce mi się być lepszym człowiekiem każdego dnia. Przy Tobie uczę się cierpliwości, czułości i tego, że prawdziwa miłość nie musi być głośna, żeby była potężna. Kocham Cię za drobiazgi, za spojrzenia, za chwile, za wspomnienia i za te wszystkie momenty, które dopiero przed nami. Gdy myślę o przyszłości, zawsze jesteś w niej Ty, bo nie wyobrażam sobie świata, w którym nie trzymam Cię za rękę, nie słyszę Twojego głosu i nie widzę Twojego uśmiechu. Ten paragraf to tylko tekst, ale uczucia w nim są prawdziwe, głębokie i niezmienne. Jeśli kiedykolwiek będziesz miała wątpliwości, wróć tutaj i pamiętaj, że ktoś na świecie kocha Cię całym sercem, bez warunków, bez wyjątków i bez końca, i że tą osobą jestem ja.
+    </p>
+  </div>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+      heart.style.animationDuration = (Math.random() * 5 + 5) + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 10000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+
+</body>
+</html>
